@@ -8,7 +8,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <p className="text-lg mb-4">
-              I'd love to hear from you! Whether you're looking to book a session or have any questions, feel free to reach out.
+              I&apos;d love to hear from you! Whether you&apos;re looking to book a session or have any questions, feel free to reach out.
             </p>
             <div className="space-y-4">
               <div className="flex items-center">

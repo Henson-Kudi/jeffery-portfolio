@@ -17,13 +17,13 @@ const About = () => {
           </div>
           <div className="md:w-1/2 md:pl-8">
             <p className="text-lg mb-4">
-              Hi, I'm John Doe, a professional photographer with over 10 years of experience. I specialize in capturing the beauty of life's moments, from weddings to landscapes and everything in between.
+              Hi, I&apos;m John Doe, a professional photographer with over 10 years of experience. I specialize in capturing the beauty of life&apos;s moments, from weddings to landscapes and everything in between.
             </p>
             <p className="text-lg mb-4">
-              My passion for photography started when I was young, and I've honed my skills over the years to deliver stunning, high-quality images that tell unique stories.
+              My passion for photography started when I was young, and I&apos;ve honed my skills over the years to deliver stunning, high-quality images that tell unique stories.
             </p>
             <p className="text-lg">
-              When I'm not behind the camera, you can find me exploring new locations, experimenting with different techniques, or teaching photography to aspiring artists.
+              When I&apos;m not behind the camera, you can find me exploring new locations, experimenting with different techniques, or teaching photography to aspiring artists.
             </p>
           </div>
         </div>

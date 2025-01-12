@@ -11,7 +11,7 @@ const Hero = () => {
       />
       <div className="relative z-10 text-center bg-black bg-opacity-5">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white shadow-text">
-          Capturing Life's Moments
+          Capturing Life&apos;s Moments
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-gray-200 shadow-text">
           Professional photography for every occasion
