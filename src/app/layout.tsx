@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,17 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+
+      <div className="fixed bottom-20 right-5">
+        <a href="https://wa.me/+971588859762" referrerPolicy="no-referrer" target="_blank" className="bg-white">
+          <Image
+            src='/images/whatsapp.png'
+            width={75}
+            height={75}
+            alt='WhatsApp button'
+          />
+        </a>
+      </div>
       </body>
     </html>
   );
