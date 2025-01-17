@@ -2,10 +2,10 @@ import { NextResponse } from 'next/server'
 import { deleteFileFromS3 } from '@/lib/s3'
 import dbConnect, { Project } from '@/lib/mongoose/models'
 
-export async function DELETE(request: Request, { params }: { params: { id: string } }) {
+export async function DELETE(request: Request, { params }: { params: Promise<{ id: string }> }) {
     await dbConnect()
 
-    const { id } = params
+    const { id } = await params
 
     const deleted = await Project.findByIdAndDelete(id)
 
