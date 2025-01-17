@@ -1,4 +1,4 @@
-import { DeleteObjectCommand, GetObjectCommand, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import { DeleteObjectCommand, DeleteObjectsCommand, GetObjectCommand, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import envConf from "../env.conf";
 
 const s3Client = new S3Client({
@@ -25,6 +25,18 @@ export async function deleteFileFromS3(filePath: string) {
     const command = new DeleteObjectCommand({
         Bucket: envConf.aws.s3BucketName,
         Key: filePath,
+    });
+    await s3Client.send(command);
+
+    return true;
+}
+
+export async function deleteManyFilesFromS3(filePaths: string[]) {
+    const command = new DeleteObjectsCommand({
+        Bucket: envConf.aws.s3BucketName,
+        Delete: {
+            Objects: filePaths.map(Key => ({ Key }))
+        }
     });
     await s3Client.send(command);
 

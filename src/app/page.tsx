@@ -20,7 +20,10 @@ export default async function Home({searchParams}: {searchParams: Promise<Record
   const total = await Project.countDocuments()
   const projects:IProjectJSON[] = (await Project.find({}, undefined, {
     limit,
-    skip
+    skip,
+    sort:{
+      createdAt: -1
+    }
   })).map(item => item.toJSON())
 
   return (

@@ -19,7 +19,10 @@ export default async function AdminPage({searchParams}: {searchParams: Promise<R
   const total = await Project.countDocuments()
   const projects:IProjectJSON[] = (await Project.find({}, undefined, {
     limit,
-    skip
+    skip,
+    sort:{
+        createdAt: -1
+    }
   })).map(item => item.toJSON())
 
   return (
