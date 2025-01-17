@@ -20,7 +20,7 @@ export default function ProjectPage({children}:{children: React.ReactNode}) {
                 <DialogTitle>Add New Project</DialogTitle>
             </DialogHeader>
 
-            <AddProjectForm onSuccess={(data)=>{{
+            <AddProjectForm onSuccess={()=>{{
                 alert('Project created')
                 setOpen(false)
             }}} />

@@ -55,7 +55,7 @@ const Portfolio = ({
                     <CarouselContent>
                       {
                         [project?.mainImage, ...(project?.otherImages ??[])]?.map((item, ind) =>(
-                          <CarouselItem>
+                          <CarouselItem key={item + ind}>
                             <Image
                               src={`${envConf.baseUrl}/api/files/${item}`}
                               alt={`project item ${ind}`}

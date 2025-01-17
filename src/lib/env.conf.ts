@@ -1,4 +1,4 @@
-export default{
+const envConf = {
     aws: {
         accessKeyId: process.env.AWS_ACCESS_KEY_ID || '',
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || '',
@@ -7,5 +7,7 @@ export default{
     },
     baseUrl: process.env.BASE_URL 
 }
+
+export default envConf
 
 

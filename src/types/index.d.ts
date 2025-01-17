@@ -1,5 +1,5 @@
 // lib/dbConnect.ts
-import mongoose, { ObjectId, Types } from 'mongoose';
+import mongoose, { Types } from 'mongoose';
 
 // Define the shape of our cached mongoose connection
 interface MongooseConnection {
@@ -9,6 +9,7 @@ interface MongooseConnection {
 
 // Define the shape of the global object with our mongoose cache
 declare global {
+    // @ts-ignore no-var
     var mongoose: {
         conn: typeof mongoose | null;
         promise: Promise<typeof mongoose> | null;
