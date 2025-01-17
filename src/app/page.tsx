@@ -9,7 +9,7 @@ import dbConnect, { Project } from "@/lib/mongoose/models";
 import { IProjectJSON } from "@/types";
 
 
-export default async function Home({searchParams}: {searchParams: Record<string, string | string[]> & {page?: string}}) {
+export default async function Home({searchParams}: {searchParams: Promise<Record<string, string | string[]> & {page?: string}>}) {
   const {page} = await searchParams
   const pageNum = page && !isNaN(Number(page)) ? Number(page) : 1
   const limit = 10

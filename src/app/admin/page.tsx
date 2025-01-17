@@ -4,7 +4,7 @@ import dbConnect, { Project } from '@/lib/mongoose/models'
 import { IProjectJSON } from '@/types'
 import ProjectPage from './components/project-page'
 
-export default async function AdminPage({searchParams}: {searchParams: Record<string, string | string[]> & {page?: string, add?: string}}) {
+export default async function AdminPage({searchParams}: {searchParams: Promise<Record<string, string | string[]> & {page?: string, add?: string}>}) {
   const userName = (await cookies()).get('userName')?.value
 
 
