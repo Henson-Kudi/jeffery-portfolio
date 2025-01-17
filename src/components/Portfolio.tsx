@@ -1,7 +1,6 @@
 import { IProjectJSON } from '@/types'
 import Image from 'next/image'
 import ProjectActionButtons from './project-action-btns'
-import envConf from '@/lib/env.conf'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from './ui/dialog'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel'
 import { Button } from './ui/button'
