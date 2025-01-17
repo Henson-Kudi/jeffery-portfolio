@@ -3,7 +3,7 @@ import { getFileFromS3 } from '@/lib/s3'
 import dbConnect from '@/lib/mongoose/models'
 import { Readable } from 'stream'
 
-export async function GET(request: Request, { params }: { params: { filePath: string[] } }) {
+export async function GET(request: Request, { params }: { params: Promise<{ filePath: string[] }> }) {
     await dbConnect()
 
     const { filePath } = await params
