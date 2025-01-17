@@ -9,7 +9,7 @@ interface MongooseConnection {
 
 // Define the shape of the global object with our mongoose cache
 declare global {
-    // @ts-ignore no-var
+    // @ts-expect-error
     var mongoose: {
         conn: typeof mongoose | null;
         promise: Promise<typeof mongoose> | null;
