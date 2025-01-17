@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
         protocol: 'http'
       },
       {
-        hostname: 'vercel',
+        hostname: 'jeffery-portfolio.vercel',
         protocol: 'https'
       }
     ]
