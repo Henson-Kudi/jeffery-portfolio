@@ -33,7 +33,7 @@ const Portfolio = ({
           {data?.map((project) => (
             <div key={project.id||project._id.toString()} className="relative overflow-hidden group rounded-lg">
               <Image
-                src={`${envConf.baseUrl}/api/files/${project.mainImage}`}
+                src={`/api/files/${project.mainImage}`}
                 alt={project.title}
                 width={400}
                 height={300}
@@ -57,7 +57,7 @@ const Portfolio = ({
                         [project?.mainImage, ...(project?.otherImages ??[])]?.map((item, ind) =>(
                           <CarouselItem key={item + ind}>
                             <Image
-                              src={`${envConf.baseUrl}/api/files/${item}`}
+                              src={`/api/files/${item}`}
                               alt={`project item ${ind}`}
                               width={0}
                               height={0}
